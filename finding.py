@@ -3,7 +3,7 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
-model = keras.models.load_model('./my_model.h5')
+model = keras.models.load_model('./models/my_model.h5')
 
 # Load and preprocess the input image
 

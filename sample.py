@@ -1,7 +1,6 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, models
-
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 train_datagen = ImageDataGenerator(
@@ -21,7 +20,7 @@ train_generator = train_datagen.flow_from_directory(
     batch_size=32,
     class_mode='categorical'  # For multi-class classification
 )
-
+num_classes = 80
 model = models.Sequential([
     keras.applications.MobileNetV2(
         input_shape=(224, 224, 3),  # Adjust input shape based on your dataset
