@@ -3,11 +3,11 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
-model = keras.models.load_model('./models/my_model.h5')
+model = keras.models.load_model('my_model.h5')
 
 # Load and preprocess the input image
 
-img_path = './test5.jpg'  # Replace with the path to your input image
+img_path = './test.jpg'  # Replace with the path to your input image
 print(img_path)
 img = image.load_img(img_path, target_size=(224, 224))  # Resize to the same size used during training
 img = image.img_to_array(img)
@@ -19,7 +19,7 @@ predicted_class = np.argmax(predictions, axis=1)[0]
 print(predicted_class)
 
 class_labels = {
-    0: 'class_0',
+    0: 'alovera',
     1: 'class_1',
     2: 'class_2',
     3: 'class_3',
